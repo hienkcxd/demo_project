@@ -4,11 +4,17 @@ namespace App\Http\Controllers\user\project;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProjectsController extends Controller
 {
     public function index(){
-        return view('Project.Project');
+        $all_project = DB::table('project_lists')->get();
+        return view('Project.Project')->with(compact('all_project'));
+    }
+    public function gallery(){
+        $all_project = DB::table('project_lists')->get();
+        return view('Project.ProjectGalery')->with(compact('all_project'));
     }
 
     public function detail(){

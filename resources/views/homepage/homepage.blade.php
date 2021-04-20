@@ -13,7 +13,7 @@
 @endsection
 
 
-@section('title','Homepage_Contructure')
+@section('title','Demo_Homepage_Contructure')
 
 @section('idBody')id = "page-about"@endsection
 

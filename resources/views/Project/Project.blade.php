@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    @include('Project.ProjectGalery')
+    @include('Project.ProjectGalery', ['all_project' => $all_project])
     @include('Project.GoBlog')
 @endsection
 
 
-@section('title','Project_Contructure')
+@section('title','Demo_Project_Contructure')
 @section('idBody')class = "page-projects"@endsection
 @section('header-bg')class = "header-bg"@endsection

@@ -1,27 +1,29 @@
 <?php
 
-namespace Database\Seeders\Project;
+    namespace Database\Seeders\Project;
 
-use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-class ProjectListSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    use Illuminate\Database\Seeder;
+    use Illuminate\Support\Facades\DB;
+
+    class ProjectListSeeder extends Seeder
     {
-        DB::table('project_lists')->insert([
-            ['ProjectID' => 'residential01','ProjectName' => 'Eco Green Interior01','TagName' => 'residential','images'=>'images/portfolio/pf(1).jpg'],
-            ['ProjectID' => 'residential02','ProjectName' => 'Eco Green Interior02','TagName' => 'residential','images'=>'images/portfolio/pf(2).jpg'],
-            ['ProjectID' => 'residential03','ProjectName' => 'Eco Green Interior03','TagName' => 'residential','images'=>'images/portfolio/pf(3).jpg'],
-            ['ProjectID' => 'residential04','ProjectName' => 'Eco Green Interior04','TagName' => 'residential','images'=>'images/portfolio/pf(4).jpg'],
-            ['ProjectID' => 'residential05','ProjectName' => 'Eco Green Interior05','TagName' => 'residential','images'=>'images/portfolio/pf(5).jpg'],
-            ['ProjectID' => 'residential06','ProjectName' => 'Eco Green Interior06','TagName' => 'residential','images'=>'images/portfolio/pf(6).jpg'],
-            ['ProjectID' => 'residential07','ProjectName' => 'Eco Green Interior07','TagName' => 'residential','images'=>'images/portfolio/pf(7).jpg'],
-            ['ProjectID' => 'residential08','ProjectName' => 'Eco Green Interior08','TagName' => 'residential','images'=>'images/portfolio/pf(8).jpg'],
-        ]);
+        /**
+         * Run the database seeds.
+         *
+         * @return void
+         */
+        public function run()
+        {
+            DB::table('project_lists')->insert([
+                //Insert data decor nhà phố
+//                ['ProjectID' => 'canho01', 'ProjectName' => 'Nha Pho Quan 1', 'TagName' => 'canho', 'images' => 'images\Project\nhapho\nhapho01_bg.png'],
+//                ['ProjectID' => 'canho03', 'ProjectName' => 'Nha Pho Quan binh thanh', 'TagName' => 'canho', 'images' => 'images\Project\nhapho\nhapho03_bg.jpg'],
+
+            //Insert data decor căn hộ
+                ['ProjectID' => 'DCH01', 'ProjectName' => 'Can Hộ Quận 5', 'TagName' => 'DCH01', 'images' => 'images\Project\canho\DCH_bg_01.jpg'],
+                ['ProjectID' => 'DCH02', 'ProjectName' => 'Căn Hộ QUận 2', 'TagName' => 'DCH01', 'images' => 'images\Project\canho\DCH_bg_02.jpg'],
+                ['ProjectID' => 'DCH03', 'ProjectName' => 'Căn Hộ Everrich', 'TagName' => 'DCH01', 'images' => 'images\Project\canho\DCH_bg_03.jpg'],
+                ['ProjectID' => 'DCH04', 'ProjectName' => 'Căn Hộ Vinhomes', 'TagName' => 'DCH01', 'images' => 'images\Project\canho\DCH_bg_04.jpg'],
+                ]);
+        }
     }
-}
