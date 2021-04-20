@@ -41,11 +41,13 @@
         Route::get('/', [MarketController::class, 'index'])->name('market');
     });
 
-    Route::prefix('Project')->group(function () {
+    Route::prefix('Project')->group(function ($para) {
         Route::get('/', [ProjectsController::class, 'index'])->name('pro');
-        Route::get('/sp1', [ProjectsController::class, 'detail'])->name('project_detail');
+        Route::get('/{ProDetailID}', [ProjectsController::class, 'projectDetail'])->name('project_detail');
     });
-
+//    Route::get('/Project/{ProDetailID}', function ($id){
+//        return 'project id:'. $id;
+//    })->name('project_detail');
 
     //Route for admin
     Route::prefix('Login')->group(function () {

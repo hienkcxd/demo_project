@@ -9,8 +9,8 @@
             <div class="col-md-12 text-center">
                 <ul id="filters" class="wow fadeInUp" data-wow-delay="0s">
                     <li><a href="#" data-filter="*" class="selected">All Projects</a></li>
-                    <li><a href="#" data-filter=".canho">Nhà Phố</a></li>
-                    <li><a href="#" data-filter=".DCH01">Decor Căn Hộ</a></li>
+                    <li><a href="#" data-filter=".nhapho">Nhà Phố</a></li>
+                    <li><a href="#" data-filter=".DCH">Decor Căn Hộ</a></li>
                     <li><a href="#" data-filter=".office">Office</a></li>
                     <li><a href="#" data-filter=".commercial">Commercial</a></li>
                 </ul>
@@ -29,7 +29,8 @@
 {{--            @dd($p)--}}
         <div class="item  {{ $p->TagName }} ">
             <div class="picframe">
-                <a class="simple-ajax-popup-align-top" href="{{ route('project_detail') }}">
+                <!-- class="simple-ajax-popup-align-top" -->
+                <a class="simple-ajax-popup-align-top" href="{{ route('project_detail', ['ProDetailID' => $p->ProjectID ]) }}">
                                 <span class="overlay">
                                     <span class="pf_text">
                                         <span class="project-name"> {{ $p->ProjectName }} </span>
