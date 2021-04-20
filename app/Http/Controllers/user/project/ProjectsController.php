@@ -15,7 +15,10 @@ class ProjectsController extends Controller
     }
     public function projectDetail(Request $request){
         $id = $request ->route()->parameter('ProDetailID');
-        $detail = DB::table('project_details')->get()->where('ProDetailID', '=', $id);
+        $detail = DB::table('project_details')
+            ->join('project_lists','project_lists.ProjectID','=', 'project_details.ProjectID')
+            ->select('project_details.*', 'project_lists.ProjectName')
+            ->get()->where('ProDetailID', '=', $id);
         return view('Project.ProjectDetail')->with(compact('detail'));
     }
 

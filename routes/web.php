@@ -45,9 +45,6 @@
         Route::get('/', [ProjectsController::class, 'index'])->name('pro');
         Route::get('/{ProDetailID}', [ProjectsController::class, 'projectDetail'])->name('project_detail');
     });
-//    Route::get('/Project/{ProDetailID}', function ($id){
-//        return 'project id:'. $id;
-//    })->name('project_detail');
 
     //Route for admin
     Route::prefix('Login')->group(function () {

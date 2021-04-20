@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-4">
                 <div class="project-info">
-                    <h2>Elegance Modern Suite</h2>
+                    <h2>{{ $p -> ProjectName }}</h2>
 
                     <div class="details">
                         <div class="info-text">
