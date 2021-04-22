@@ -16,6 +16,5 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(ProjectListSeeder::class);
         $this->call(ProjectDetailSeeder::class);
-
     }
 }
