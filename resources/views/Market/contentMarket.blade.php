@@ -7,24 +7,16 @@
 </head>
 <body>
 <!-- Chart's container -->
-<div id="chart" style="height: 300px; width: 500px" class="selectContent"></div>
+<div id="chart" style="height: 300px; width: 500px; border: 1px solid" class="selectContent"></div>
 <!-- Charting library -->
 <script src="https://unpkg.com/echarts/dist/echarts.min.js"></script>
 <!-- Chartisan -->
 <script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script>
 <!-- Your application script -->
 <script>
-    import { Chartisan, ChartisanHooks } from '@chartisan/chartjs'
     const chart = new Chartisan({
         el: '#chart',
         url: "@chart('sampleChart')",
-        hooks: new ChartisanHooks()
-            .colors(['#ECC94B', '#4299E1'])
-            .responsive()
-            .beginAtZero()
-            .legend({ position: 'bottom' })
-            .title('This is a sample chart using chartisan!')
-            .datasets([{ type: 'line', fill: false }, 'bar']),
     });
 </script>
 </body>
