@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\demo\demoTestSeeder;
 use Database\Seeders\Project\ProjectDetailSeeder;
 use Database\Seeders\Project\ProjectListSeeder;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,7 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(ProjectListSeeder::class);
-        $this->call(ProjectDetailSeeder::class);
+        $this->call(demoTestSeeder::class);
     }
 }

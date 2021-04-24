@@ -1,6 +1,7 @@
 <?php
 
     use App\Http\Controllers\admin\login\LoginController;
+    use App\Http\Controllers\demo\demoController;
     use App\Http\Controllers\user\about\AboutController;
     use App\Http\Controllers\user\market\MarketController;
     use App\Http\Controllers\user\news\NewsController;
@@ -20,6 +21,9 @@
     */
 
     //Route for user
+    Route::prefix('chart')->group(function () {
+        Route::get('/', [demoController::class, 'index']);
+    });
     Route::get('/', function () {
         return view('homepage.homepage');
     })->name('homepage');
